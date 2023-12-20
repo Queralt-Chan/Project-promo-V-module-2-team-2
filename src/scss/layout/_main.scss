@@ -1,35 +1,32 @@
-.main {
-    
-    height: 458px; 
-    background-color: $whiteFour;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .main-container {
-       
+    
+    
+   
+   
+    .main {
+        background-color: $whiteFour;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      
+        height: 80vh; 
+        gap: 17px;
 
-        
+       
 
-    .maintitle {
+    &__title {
+
         font-family: $fontMerriweather;
         color: $dullOrange;
         font-size: 19.5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+       
+        
+      
     }
 
-    .maintext {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &__text {
+       
         font-family: $fontOpenSans;
         color: $darkGreenBlue;
         font-size: 12.8px;
@@ -38,7 +35,7 @@
         
     }
 
-    .mainitems {
+    .items {
 
          display: flex; 
          justify-content:center;
@@ -46,14 +43,13 @@
          gap: 20px;
          border: solid 1.6px $dullOrange;
          border-radius: 4px;
-         margin-top: 200px;
-         margin-right:80px;
+       
          padding: 30px;
          width: 268px;
          height: 74px;
          
         
-     .itemstext {
+     &__text {
         font-family: $fontOpenSans;
         color: $darkGreenBlue;
         font-size: 12.8px;
@@ -63,4 +59,3 @@
 
 }
     
-}
