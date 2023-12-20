@@ -1,10 +1,20 @@
 .preview {
   background-image: linear-gradient(to bottom, $silver, $paleGrey);
-  height: 80%;
-  padding: 88px 45px 40px 35px;
+  
+  padding: 88px 0 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: 768px){
+    margin: 20px 40px 20px 30px;
+    justify-content: center;
+   padding: 0 45px;
+   width: 40vw;
+   border-radius: 6px;
+  }
+  @media (min-width: 1200px){
+    width: 60vw;
+  }
   &__reset{
     height: 30px;
     width: 75px;
@@ -20,9 +30,8 @@
 .card {
   width:240px ;
   background-color: $whiteTwo;
-  
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-
+ 
   &__data {
     height: 42px;
     border-left: 5px solid $dirtyBlue;
