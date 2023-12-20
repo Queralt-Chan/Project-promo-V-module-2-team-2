@@ -1,5 +1,7 @@
-.page__header {
+.header {
+  background-color: $whiteFour;
+  
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
 }
