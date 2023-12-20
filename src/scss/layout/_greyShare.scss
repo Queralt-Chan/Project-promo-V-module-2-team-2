@@ -1,0 +1,20 @@
+.sectionForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.buttonGrey {
+background-color: lightgreen;
+    &__button  {
+    background-color: $white;
+
+    }
+}
+
+.divShare {
+    border-top: solid 1px $whiteThree ;
+    border-bottom: solid 1px $whiteThree ;
+
+}

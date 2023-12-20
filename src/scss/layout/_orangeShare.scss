@@ -1,0 +1,8 @@
+.orangeButton {
+    background-color: lightcoral;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px $whiteThree;
+}
