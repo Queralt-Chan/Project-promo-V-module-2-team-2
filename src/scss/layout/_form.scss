@@ -1,14 +1,18 @@
 .form {
     border-color: transparent;
     height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 .formContainer {
     display: grid;
     grid-template-columns: 140px 1fr;
-    grid-template-rows: repeat(8,30px);
-    gap: 20px;
+    grid-template-rows: repeat(8,40px);
+    gap: 45px;
     margin: 30px 20px;
-    &__name, &__job, &__email, &__phone, &__linkedin, &__github, &__image {
+    &__name, &__job, &__email, &__phone, &__linkedin, &__github {
         display: flex;
         flex-direction: column;
         grid-column: 1/3;
@@ -17,20 +21,49 @@
         line-height: 1.43;
         label {
             color: $darkGreenBlue;
+            margin-bottom: 7px;
         }
         input {
             color: $pinkish-Grey;
             font-size: 1.4rem;
             font-family: $fontOpenSans;
             border: solid 1px $hospitalGreen;
-           
+            padding-top: 3px;
+            padding-bottom: 7px;
+            max-width: 281px;
         }
+    }
+    &__image {
+            display: flex;
+            flex-direction: column;
+            grid-column: 1/2;
+            font-size: 1.4rem;
+            font-family: $fontOpenSans;
+            line-height: 1.43;
+        &--title {
+            color: $darkGreenBlue;
+            margin-bottom: 7px;
+        }
+        &--add {
+            color: $whiteTwo;
+            background-color: $dullOrange;
+            width: 140px;
+            height: 40px;
+            padding-top: 3px;
+            padding-bottom: 7px;
+            text-align: center;
+        }
+    }
+
     &__square {
+            grid-column: 2/3;
+            grid-row: 3/4;
             width: 30px;
             height: 30px;
             border: solid 1px $hospitalGreen;
-            background-color: blue;
-        }
+            align-self: flex-end;
+            transform: translateY(60%);
     }
 }
+
  
