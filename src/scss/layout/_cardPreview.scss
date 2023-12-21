@@ -1,26 +1,25 @@
 .preview {
   background-image: linear-gradient(to bottom, $silver, $paleGrey);
-  
   padding: 88px 0 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     margin: 20px 40px 20px 30px;
     justify-content: center;
-   padding: 0 45px;
-   width: 40vw;
-   border-radius: 6px;
+    padding: 0 45px;
+    width: 40vw;
+    border-radius: 6px;
   }
-  @media (min-width: 1200px){
+  @media (min-width: 1200px) {
     width: 60vw;
   }
-  &__reset{
+  &__reset {
     height: 30px;
     width: 75px;
     background-color: $silver;
     border-radius: 50px;
-    border: 1px solid  $whiteTwo;
+    border: 1px solid $whiteTwo;
     font-size: 1.2rem;
     color: $gunMetal;
     position: relative;
@@ -28,28 +27,27 @@
   }
 }
 .card {
-  width:240px ;
+  width: 240px;
   background-color: $whiteTwo;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
- 
   &__data {
     height: 42px;
     border-left: 5px solid $dirtyBlue;
     margin: 21px 0 10px 0;
-    &--name {
-      margin-left: 20px;
-      font-family: $fontMontserrat;
-      font-weight: bold;
-      font-size: 1.8rem;
-      color: $darkGreenBlue;
-    }
-    &--job {
-      margin-left: 20px;
-      font-family: $fontMontserrat;
-      font-weight: normal;
-      font-size: 1.6rem;
-      color: $gunMetal;
-    }
+  }
+  &__name {
+    margin-left: 20px;
+    font-family: $fontMontserrat;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: $darkGreenBlue;
+  }
+  &__job {
+    margin-left: 20px;
+    font-family: $fontMontserrat;
+    font-weight: normal;
+    font-size: 1.6rem;
+    color: $gunMetal;
   }
   &__image {
     width: 100%;
