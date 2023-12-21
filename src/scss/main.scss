@@ -1,7 +1,18 @@
 @import 'core/variables';
 @import 'core/reset';
-@import 'layout/header';
+@import 'layout/cardPreview';
 @import 'layout/form';
 @import 'layout/formTitle';
-@import 'layout/footer';
 
+
+.bodyPage{
+    background-image: linear-gradient(to bottom, $whiteFour, $whiteTwo 9%);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    @media(min-width: 768px){
+    flex-direction: row-reverse;
+    }
+
+      
+}
