@@ -1,17 +1,12 @@
 @import 'core/variables';
 @import 'core/mixins';
 @import 'core/reset';
-<<<<<<< HEAD
-@import 'layout/formTitle';
-@import 'layout/orangeShare';
-@import 'layout/greyShare';
-
-=======
 @import 'layout/cardPreview';
 @import 'layout/formTitle';
 @import 'layout/design';
 @import 'layout/fill';
->>>>>>> 6e513027e49c4d7bf7c7c2b7c7de3701892afeb6
+@import 'layout/orangeShare';
+@import 'layout/greyShare';
 
 
 
@@ -26,4 +21,9 @@
     }
 
       
+}
+
+.formStyle {
+    display: flex;
+    flex-direction: column;
 }
