@@ -1,0 +1,44 @@
+.sectionForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.buttonGrey {
+
+    // background-color: lightgreen;
+    &__button {
+        width: 130px;
+        height: 24px;
+        background-color: $white;
+        color: $whiteTwo;
+        text-transform: uppercase;
+        @include formText;
+
+
+    }
+}
+
+.divShare {
+    border-top: solid 1px $whiteThree ;
+    border-bottom: solid 1px $whiteThree ;
+
+    &__p {
+        @include formText;
+        color: $gunMetal;
+
+        &__a {
+            font-family: $fontOpenSansBold;
+            @include formText;
+            font-size: 12px;
+            color: $dullOrange;
+        }
+
+    }
+
+}
+
+// .twitterShare {
+
+// }

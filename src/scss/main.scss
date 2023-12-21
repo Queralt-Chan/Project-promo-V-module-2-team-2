@@ -1,9 +1,12 @@
 @import 'core/variables';
+@import 'core/mixins';
 @import 'core/reset';
 @import 'layout/cardPreview';
 @import 'layout/formTitle';
 @import 'layout/design';
 @import 'layout/fill';
+@import 'layout/orangeShare';
+@import 'layout/greyShare';
 
 
 
@@ -18,4 +21,9 @@
     }
 
       
+}
+
+.formStyle {
+    display: flex;
+    flex-direction: column;
 }
