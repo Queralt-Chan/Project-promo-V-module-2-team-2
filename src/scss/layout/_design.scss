@@ -1,0 +1,120 @@
+.formDesing{
+    margin-bottom: 30px;
+    @media(min-width: 768px){
+        background-color: $whiteThree;
+    }
+}
+.colours{
+    color: $gunMetal;
+    font-size: 14px;
+    font-family: $fontOpenSans;
+    padding-top: 22px;
+    padding-left: 39px;
+    padding-bottom: 132px;
+    padding-right: 82px;
+}
+
+.formu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 20px;
+}
+
+.rectangOne{
+    padding-bottom: 20px;
+    display: flex;
+    &__colorDark{
+    background-color: $darkGreenBlue;
+    width: 30px;
+    height: 25px;
+    }
+    &__colorDirty{
+    background-color: $dirtyBlue;
+    width: 30px;
+    height: 25px;
+    }
+    &__colorHospital{
+    background-color: $hospitalGreen;
+    width: 30px;
+    height: 25px;
+    }
+}
+
+
+.rectangTwo{
+    padding-bottom: 20px;
+    display: flex;
+    &__colorDried{
+    background-color: $driedBlood;
+    width: 30px;
+    height: 25px;
+    }
+    &__colorRusty{
+    background-color: $rustyRed;
+    width: 30px;
+    height: 25px;
+    }
+    &__colorTomato{
+    background-color: $tomato;
+    width: 30px;
+    height: 25px;
+    }
+}
+
+.rectangThree{
+    padding-bottom: 20px;
+    display: flex;
+
+    &__colorSlate{
+    background-color: $slate;
+    width: 30px;
+    }
+
+    &__colorFaded{
+    background-color: $fadedOrange;
+    width: 30px;
+    }
+
+    &__colorLight{
+    background-color: $lifeGreyBlue;
+    width: 30px;
+    }
+}
+
+.palette1{
+    .card__name{
+        color: $darkGreenBlue;
+    }
+    .card__links{
+        color: $dirtyBlue;
+    }
+    .card__data{
+        color: $hospitalGreen;
+    }
+}
+
+.palette2{
+    .card__name{
+        color: $driedBlood;
+    }
+    .card__links{
+        color: $rustyRed;
+    }
+    .card__data{
+        color: $tomato;
+    }
+}
+
+.palette3{
+    .card__name{
+        color: $slate;
+    }
+    .card__links{
+        color: $fadedOrange;
+    }
+    .card__data{
+        color: $lifeGreyBlue;
+    }
+}
