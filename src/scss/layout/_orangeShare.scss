@@ -1,8 +1,28 @@
-.orangeButton {
-    background-color: lightcoral;
-    border: solid 1px black;
+.buttonOrange {
+    background-color: $dullOrange;
+    width: 199px;
+    height: 50px;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: solid 1px $whiteThree;
+    border: $dullOrange;
+
+    &__btn {
+        // width: 25px;
+        // height: 22px;
+        background-color: $dullOrange;
+    }
+
+    &__icon {
+        // width: 25px;
+        // height: 22px;
+    }
+
+    &__text {
+        @include formText;
+        color: $whiteTwo;
+        background-color: $dullOrange;
+        text-transform: uppercase;
+    }
 }
