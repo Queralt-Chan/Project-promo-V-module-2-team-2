@@ -1,4 +1,4 @@
-.form{
+.formDesing{
     margin-bottom: 30px;
     @media(min-width: 768px){
         background-color: $whiteThree;
@@ -80,5 +80,41 @@
     &__colorLight{
     background-color: $lifeGreyBlue;
     width: 30px;
+    }
+}
+
+.palette1{
+    .card__name{
+        color: $darkGreenBlue;
+    }
+    .card__links{
+        color: $dirtyBlue;
+    }
+    .card__data{
+        color: $hospitalGreen;
+    }
+}
+
+.palette2{
+    .card__name{
+        color: $driedBlood;
+    }
+    .card__links{
+        color: $rustyRed;
+    }
+    .card__data{
+        color: $tomato;
+    }
+}
+
+.palette3{
+    .card__name{
+        color: $slate;
+    }
+    .card__links{
+        color: $fadedOrange;
+    }
+    .card__data{
+        color: $lifeGreyBlue;
     }
 }
