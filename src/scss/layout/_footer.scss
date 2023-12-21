@@ -13,7 +13,7 @@
 
    }
 
-   .logo {
+   &__logo {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -25,7 +25,7 @@
     
   }
    
-  .footerTitle {
+  &__title {
     font-family: $fontOpenSans;
     color: $brownishGrey;
     font-size: 15px;
