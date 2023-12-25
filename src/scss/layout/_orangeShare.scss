@@ -1,30 +1,38 @@
-// .fieldsetShare {
-  
-
-// }
+.fieldsetShare {
+height: 20vh;
+display: flex;
+justify-content: center;
+border: none;
+}
 
 .buttonOrange {
-    background-color: $dullOrange;
-    width: 199px;
-    height: 50px;
-    border-radius: 12px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    // background-color: lightgreen;
+    height: 20vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: $dullOrange;
+    padding: 0;
+    // border-bottom: 2px solid $whiteThree ;
+    
 
     &__btn {
-        // width: 25px;
-        // height: 22px;
         background-color: $dullOrange;
+        border: $dullOrange;
+        width: 199px;
+        height: 50px;
+        border-radius: 12px;
         display: flex;
         flex-direction: row;
-
+        justify-content: center;
+        align-items: center;
     }
 
     &__icon {
-        // width: 25px;
-        // height: 22px;
+        width: 25px;
+        height: 22px;
+        color: $white;
     }
 
     &__text {
@@ -32,5 +40,6 @@
         color: $whiteTwo;
         background-color: $dullOrange;
         text-transform: uppercase;
+      
     }
 }

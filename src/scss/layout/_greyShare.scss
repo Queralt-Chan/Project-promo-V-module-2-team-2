@@ -1,44 +1,80 @@
-.sectionForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+.fieldShare {
+    border: none;
 }
 
 .buttonGrey {
+    height: 30vh;
 
-    // background-color: lightgreen;
-    &__button {
-        width: 130px;
-        height: 24px;
-        background-color: $white;
-        color: $whiteTwo;
-        text-transform: uppercase;
-        @include formText;
+    // &__button {
+    //     @include formText;
+    //     width: 130px;
+    //     height: 24px;
+    //     background-color: $white;
+    //     color: $whiteTwo;
+    //     text-transform: uppercase;
 
-
-    }
+    // }
 }
 
 .divShare {
-    border-top: solid 1px $whiteThree ;
-    border-bottom: solid 1px $whiteThree ;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 20px;
+
+    &__topLine {
+        border-top: 2px solid $whiteThree;
+        width: 280px;
+    }
 
     &__p {
         @include formText;
         color: $gunMetal;
+    }
 
-        &__a {
-            font-family: $fontOpenSansBold;
-            @include formText;
-            font-size: 12px;
-            color: $dullOrange;
-        }
+    &__a {
+        @include formText;
+        font-family: $fontOpenSans;
+        font-size: 12px;
+        color: $dullOrange;
+        text-decoration: none;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    &__botLine {
+    border-top: 2px solid $whiteThree;
+    width: 280px; 
+    }
+}
 
+.twitterShare {
+    background-color: $azure;
+    height: 30px;
+    width: 181px;
+    border-radius: 3px;
+    border-color: $azure;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &__icon {
+        width: 18px;
+        height: 18px;
+        color: $white;
+    }
+
+    &__button {
+        @include formText;
+        font-size: 14px;
+        font-family: $fontOpenSans;
+        line-height: 20px;
+        color: $white;
+       
     }
 
 }
-
-// .twitterShare {
-
-// }
