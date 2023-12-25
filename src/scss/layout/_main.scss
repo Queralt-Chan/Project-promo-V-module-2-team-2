@@ -1,8 +1,6 @@
 
-   
-    .main {
+    .main-landing {
         background-color: $whiteFour;
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -10,16 +8,14 @@
         height: 80vh; 
         gap: 17px;
 
-       
+    
 
     &__title {
 
         font-family: $fontMerriweather;
         color: $dullOrange;
         font-size: 19.5px;
-       
         
-      
     }
 
     &__text {
@@ -29,34 +25,32 @@
         font-size: 12.8px;
 
     }
-        
-    }
-
-    .items {
-
-         display: flex; 
-         justify-content:center;
-         align-items:center;
-         gap: 20px;
-         border: solid 1.6px $dullOrange;
-         border-radius: 4px;
        
-         padding: 30px;
-         width: 268px;
-         height: 74px;
-         
-        
-     &__text {
-        font-family: $fontOpenSans;
-        color: $darkGreenBlue;
-        font-size: 12.8px;
-     }    
+    &__items {
 
+        display: flex; 
+        justify-content:center;
+        align-items:center;
+        gap: 20px;
+        border: solid 1.6px $dullOrange;
+        border-radius: 4px;
+      
+        padding: 30px;
+        width: 268px;
+        height: 74px;
+        
+    }  
+    
     &__button {
-        background-color: ;
+        background-color: $dirtyBlue;
         font-family: $fontOpenSans;
         border: 21px ;
-        border-radius: ;
+        
     }
-}
+
     
+    }
+
+   
+
+   
