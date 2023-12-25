@@ -52,6 +52,7 @@
         width: 329px;
     }
 }
+}
 
 .twitterShare {
     background-color: $azure;
@@ -63,7 +64,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
+  
     &__icon {
         width: 18px;
         height: 18px;

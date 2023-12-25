@@ -15,6 +15,7 @@ border: none;
     border: $dullOrange;
     padding: 0;
     // border-bottom: 2px solid $whiteThree ;
+  
     
 
     &__btn {
@@ -27,12 +28,20 @@ border: none;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+
+        @media (min-width: 768px){
+            background-color: $white ;
+        }
     }
+
 
     &__icon {
         width: 25px;
         height: 22px;
         color: $white;
+        @media (min-width: 768px){
+            background-color: $white ;
+        }
     }
 
     &__text {
@@ -40,12 +49,18 @@ border: none;
         color: $whiteTwo;
         background-color: $dullOrange;
         text-transform: uppercase;
-      
+        @media (min-width: 768px) {
+            background-color: $white ; 
+        }
+     
     }
+
+    //  &__botLine {
+    //   width: 329px;
+    //  }
     // @media (min-width: 768px) {
     //     justify-content: flex-start;
-    // &__botLine {
-    //   width: 329px;
+   
 
     // }
 }
