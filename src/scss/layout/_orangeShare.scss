@@ -42,10 +42,10 @@ border: none;
         text-transform: uppercase;
       
     }
-    @media all {min 768px}
+    // @media (min-width: 768px) {
+    //     justify-content: flex-start;
+    // &__botLine {
+    //   width: 329px;
 
-    &__botLine {
-      
-
-    }
+    // }
 }

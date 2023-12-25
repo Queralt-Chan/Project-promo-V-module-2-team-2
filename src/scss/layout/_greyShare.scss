@@ -48,6 +48,8 @@
     &__botLine {
     border-top: 2px solid $whiteThree;
     width: 280px; 
+    @media (min-width: 768px) {
+        width: 329px;
     }
 }
 
