@@ -3,6 +3,7 @@ height: 20vh;
 display: flex;
 justify-content: center;
 border: none;
+
 }
 
 .buttonOrange {
@@ -15,6 +16,9 @@ border: none;
     border: $dullOrange;
     padding: 0;
     // border-bottom: 2px solid $whiteThree ;
+    @media (min-width: 768px) {
+        justify-content: flex-start;
+    }
   
     
 

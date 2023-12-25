@@ -34,6 +34,11 @@
     &__p {
         @include formText;
         color: $gunMetal;
+        // @media (min-width: 768px) {
+        //     justify-content: flex-start;
+        //     align-items: flex-start;
+        // }
+    
     }
 
     &__a {
