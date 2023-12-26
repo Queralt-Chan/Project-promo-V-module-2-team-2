@@ -1,12 +1,15 @@
 
-    .mainContainer {
-        background-color: $tomato;
+    .landing {
+        background-color: $whiteFour;
         display: flex;
         flex-direction: column;
+        align-content: center;
+        text-align: center;
         justify-content: center;
         align-items: center;
-        height: 80vh; 
-        gap: 17px;
+        
+        
+       
 
     
 
@@ -15,6 +18,7 @@
         font-family: $fontMerriweather;
         color: $dullOrange;
         font-size: 19.5px;
+       
         
     }
 
@@ -22,29 +26,48 @@
        
         font-family: $fontOpenSans;
         color: $darkGreenBlue;
-        font-size: 12.8px;
+        font-size: 1.28rem; 
+        margin: 0 28px 18px;
 
     }
        
     &__items {
 
         display: flex; 
-        justify-content:center;
+        justify-content: space-around;
         align-items:center;
-        gap: 20px;
+        color: $dullOrange;
+        font-size: 2.24rem;
+        text-align: center;
+        gap: 24px;
         border: solid 1.6px $dullOrange;
         border-radius: 4px;
-      
         padding: 30px;
-        width: 268px;
         height: 74px;
+
+      &--options {
+        color: $gunMetal;
+        font-family: $fontOpenSans;
+        font-size: 1.28rem;
+      }  
         
     }  
+
+
     
     &__button {
         background-color: $dirtyBlue;
         font-family: $fontOpenSans;
-        border: 21px ;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: $whiteTwo;
+        border-radius: 21px;
+        text-decoration: none;
+        padding: 10px 20px ;
+        margin-top: 38.6px;
+        margin-bottom: 30px;
+
+       
         
     }
 

@@ -2,35 +2,25 @@
  
   background-color: $whiteTwo;
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
 
-  .footerContainer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
-
-   }
-
+ 
    &__logo {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+   
     padding-top: 20px;
     padding-bottom: 30px;
     width: 103px;
-    margin: auto;
+   
     
   }
    
   &__title {
     font-family: $fontOpenSans;
     color: $brownishGrey;
-    font-size: 15px;
-    opacity: 50%;
-    padding: 5px 60px 60px;
+    font-size: 1.5rem;
+    opacity: 0.5;
+    margin-top: 18px;
    
    } 
 }
