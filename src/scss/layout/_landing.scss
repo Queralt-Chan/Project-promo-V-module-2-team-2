@@ -1,0 +1,95 @@
+   
+
+  
+    .landing {
+        background-color: $whiteFour;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+        min-height: 85vh;
+        
+        
+
+     &__image {
+        margin-top: 95px;
+        width: 100%; 
+        padding: 0 35px;
+        margin-bottom: 35px;
+        object-fit: contain;
+     }   
+       
+
+    
+
+    &__title {
+
+        font-family: $fontMerriweather;
+        color: $dullOrange;
+        font-size: 19.5px;
+       
+        
+    }
+
+    &__text {
+       
+        font-family: $fontOpenSans;
+        color: $darkGreenBlue;
+        font-size: 1.28rem; 
+        margin: 0 28px 18px;
+
+    }
+       
+    &__items {
+
+        display: flex; 
+        justify-content: space-around;
+        align-items:center;
+        color: $dullOrange;
+        font-size: 2.24rem;
+        text-align: center;
+        gap: 24px;
+        border: solid 1.6px $dullOrange;
+        border-radius: 4px;
+        padding: 30px;
+        height: 74px;
+
+      &--options {
+        color: $gunMetal;
+        font-family: $fontOpenSans;
+        font-size: 1.28rem;
+      }  
+        
+    }  
+
+
+    
+    &__button {
+        background-color: $dirtyBlue;
+        font-family: $fontOpenSans;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: $whiteTwo;
+        border-radius: 21px;
+        text-decoration: none;
+        padding: 10px 20px ;
+        margin-top: 38.6px;
+        margin-bottom: 30px;
+
+        @media (min-width:768px){
+            margin-bottom: 59px;
+        }
+
+       
+        
+    }
+
+    
+    }
+
+   
+
+   
