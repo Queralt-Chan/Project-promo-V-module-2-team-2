@@ -1,6 +1,6 @@
 @mixin formText (){
-    font-family: $fontOpenSansBold;
-    font-size: 18px;
+    font-family: $fontOpenSans;
+    font-size: 1.8rem;
     font-weight: 600;
     font-stretch: normal;
     font-style: normal;
@@ -8,5 +8,3 @@
     letter-spacing: normal;
 }
 
-/*sólo cambiar en link-URL a 12px */
-/*En botón twitter a 14px + $fontOpensans */

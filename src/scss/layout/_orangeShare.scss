@@ -1,36 +1,51 @@
-// .fieldsetShare {
-  
-
-// }
-
 .buttonOrange {
-    background-color: $dullOrange;
-    width: 199px;
-    height: 50px;
-    border-radius: 12px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    border: none;
+    align-items: center;
     border: $dullOrange;
-
-    &__btn {
-        // width: 25px;
-        // height: 22px;
-        background-color: $dullOrange;
-        display: flex;
-        flex-direction: row;
-
+    padding: 0;
+    @media (min-width: 768px) {
+        justify-content: flex-start;
     }
 
+    &__btn {
+        background-color: $dullOrange;
+        border: none;
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32); 
+        width: 199px;
+        height: 50px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+
+        @media (min-width: 768px) {
+            background-color: $white ;
+        }
+    }
+
+
     &__icon {
-        // width: 25px;
-        // height: 22px;
+        font-size: 2.2rem;
+        color: $whiteTwo;
+
+        @media (min-width: 768px) {
+            background-color: $white ;
+        }
     }
 
     &__text {
         @include formText;
         color: $whiteTwo;
-        background-color: $dullOrange;
         text-transform: uppercase;
+        @media (min-width: 768px) {
+            background-color: $white ;
+        }
+
     }
+
 }
