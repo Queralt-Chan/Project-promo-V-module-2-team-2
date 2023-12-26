@@ -44,7 +44,7 @@
     &__a {
         @include formText;
         font-family: $fontOpenSans;
-        font-size: 12px;
+        font-size: 1.2rem;
         color: $dullOrange;
         text-decoration: none;
         flex-wrap: nowrap;
@@ -78,9 +78,9 @@
 
     &__button {
         @include formText;
-        font-size: 14px;
+        font-size: 1.4rem;
         font-family: $fontOpenSans;
-        line-height: 20px;
+        line-height: 2rem;
         color: $white;
        
     }
