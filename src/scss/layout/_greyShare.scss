@@ -1,24 +1,6 @@
-.fieldShare {
-    border: none;
-}
-
-.buttonGrey {
-    height: 30vh;
-
-    // &__button {
-    //     @include formText;
-    //     width: 130px;
-    //     height: 24px;
-    //     background-color: $white;
-    //     color: $whiteTwo;
-    //     text-transform: uppercase;
-
-    // }
-}
-
 .divShare {
     height: 40vh;
-    width: 100%;
+    border: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,18 +9,15 @@
     padding-top: 20px;
 
     &__topLine {
-        border-top: 2px solid $whiteThree;
-        width: 280px;
+        background-color: $whiteThree;
+        width: 80vw;
+        height: 1px;
+        margin: 0 20px;
     }
 
     &__p {
         @include formText;
         color: $gunMetal;
-        // @media (min-width: 768px) {
-        //     justify-content: flex-start;
-        //     align-items: flex-start;
-        // }
-    
     }
 
     &__a {
@@ -49,14 +28,16 @@
         text-decoration: none;
         flex-wrap: nowrap;
         align-items: center;
+
     }
+
     &__botLine {
-    border-top: 2px solid $whiteThree;
-    width: 280px; 
-    @media (min-width: 768px) {
-        width: 329px;
+        background-color: $whiteThree;
+        width: 80vw;
+        height: 1px;
+        margin: 0 20px;
+
     }
-}
 }
 
 .twitterShare {
@@ -64,25 +45,26 @@
     height: 30px;
     width: 181px;
     border-radius: 3px;
-    border-color: $azure;
+    border: none;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  
+    gap: 9.5px;
+
     &__icon {
-        width: 18px;
-        height: 18px;
-        color: $white;
+        font-size: 1.8rem;
+        color: $whiteTwo;
     }
 
     &__button {
         @include formText;
         font-size: 1.4rem;
         font-family: $fontOpenSans;
-        line-height: 2rem;
-        color: $white;
-       
+        color: $whiteTwo;
+        font-weight: 400;
+
     }
 
 }

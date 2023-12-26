@@ -1,32 +1,19 @@
-.fieldsetShare {
-height: 20vh;
-display: flex;
-justify-content: center;
-border: none;
-
-}
-
 .buttonOrange {
-    // background-color: lightgreen;
     height: 20vh;
-    width: 90vw;
     display: flex;
     justify-content: center;
+    border: none;
     align-items: center;
     border: $dullOrange;
     padding: 0;
-    // border-bottom: 2px solid $whiteThree ;
     @media (min-width: 768px) {
         justify-content: flex-start;
     }
-  
-    
 
     &__btn {
-        // background-color: $dullOrange;
-        // border: $dullOrange;
-        background-color: $white;
-        border: $white;
+        background-color: $dullOrange;
+        border: none;
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32); 
         width: 199px;
         height: 50px;
         border-radius: 12px;
@@ -36,16 +23,17 @@ border: none;
         align-items: center;
         gap: 0.8rem;
 
-        @media (min-width: 768px){
+        @media (min-width: 768px) {
             background-color: $white ;
         }
     }
 
 
     &__icon {
-       font-size: 2.2rem;
+        font-size: 2.2rem;
         color: $whiteTwo;
-        @media (min-width: 768px){
+
+        @media (min-width: 768px) {
             background-color: $white ;
         }
     }
@@ -53,22 +41,11 @@ border: none;
     &__text {
         @include formText;
         color: $whiteTwo;
-        // background-color: $dullOrange;
-        background-color: $white;
         text-transform: uppercase;
-        // height: 1.5rem;
         @media (min-width: 768px) {
-            background-color: $white ; 
+            background-color: $white ;
         }
-     
+
     }
 
-    //  &__botLine {
-    //   width: 329px;
-    //  }
-    // @media (min-width: 768px) {
-    //     justify-content: flex-start;
-   
-
-    // }
 }
