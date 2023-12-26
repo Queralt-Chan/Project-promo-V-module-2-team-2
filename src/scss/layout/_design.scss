@@ -1,6 +1,7 @@
 .formDesing{
     margin: 30px 20px;
     height: 224px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     border-color: transparent;
@@ -9,12 +10,9 @@
 }
 .colours{
     color: $gunMetal;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-family: $fontOpenSans;
-    padding-top: 22px;
     padding-left: 39px;
-    padding-bottom: 132px;
-    padding-right: 82px;
 }
 
 .section{
@@ -23,9 +21,14 @@
     align-items: flex-end;
     padding-right: 20px;
     border-color: transparent;
+    border-bottom: solid 1px $whiteThree;
     /*@media(min-width: 768px){
     }*/
 }
+
+/*.input[type=radio]:checked {
+    border: 5px solid #0DFF92;
+}*/
 
 .rectangOne{
     padding-bottom: 20px;
