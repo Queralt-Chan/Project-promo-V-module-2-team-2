@@ -30,4 +30,7 @@
 .formStyle {
     display: flex;
     flex-direction: column;
+    @media (min-width: 768px){
+        width: 40vw;
+    }
 }
