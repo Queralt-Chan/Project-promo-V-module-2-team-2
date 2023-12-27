@@ -2,12 +2,17 @@
     border-color: transparent;
     display: flex;
     flex-direction: column;
-    align-items: center;
     
 }
+
+.formHidden {
+    display: none;
+}
+//para que no se vea la section tengo que añadir esta clase y quitarle la que tiene, o cambiar una por otra//
+
 .formContainer {
     display: grid;
-    grid-template-columns: 140px 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(8,40px);
     gap: 45px;
     margin: 30px 20px;
@@ -29,7 +34,10 @@
             border: solid 1px $hospitalGreen;
             padding-top: 3px;
             padding-bottom: 7px;
-            max-width: 281px;
+            &::placeholder {
+                color: $pinkish-Grey;
+            }
+            // max-width: 281px;
         }
     }
     &__image {
@@ -66,3 +74,8 @@
 }
 
  
+.borderFill {
+    background-color: $whiteThree;
+    height: 1px;
+    margin: 0 20px;
+}
