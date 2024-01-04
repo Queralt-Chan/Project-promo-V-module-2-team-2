@@ -9,6 +9,8 @@ const previewLinkedin = document.querySelector('.js-linkedinLink');
 const previewGithub = document.querySelector('.js-githubLink');
 const formContainer = document.querySelector('.js-formContainer');
 const previewCard= document.querySelector('.js-card');
+const previewImage= document.querySelector('.js-cardImage');
+
 
 
 //Variables Design
@@ -25,6 +27,7 @@ const inputMail = document.querySelector('.js_inputEmail');
 const inputLinkedin = document.querySelector('.js_inputLinkedin');
 const inputGithub = document.querySelector('.js_inputGithub');
 const form= document.querySelector('.formStyle');
+const inputImage= document.querySelector('.js_image');
 const data= {
     palette: 1,
     name: '',
@@ -60,6 +63,10 @@ function handleForm(event) {
   } else if (inputId === 'github') {
     data.github= event.target.value;
     previewGithub.href = 'https://github.com/' + inputGithub.value;
+  } else if (inputId=== 'photo') {
+    data.photo= event.target.value;
+    previewImage.src= inputImage.value;   
+    
   }
 };
 
