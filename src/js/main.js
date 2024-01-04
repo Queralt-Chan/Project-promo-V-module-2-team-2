@@ -28,6 +28,7 @@ const inputLinkedin = document.querySelector('.js_inputLinkedin');
 const inputGithub = document.querySelector('.js_inputGithub');
 const form= document.querySelector('.formStyle');
 const inputImage= document.querySelector('.js_image');
+const miniPreview=document.querySelector('.js_miniPreview');
 const data= {
     palette: 1,
     name: '',
@@ -63,11 +64,11 @@ function handleForm(event) {
   } else if (inputId === 'github') {
     data.github= event.target.value;
     previewGithub.href = 'https://github.com/' + inputGithub.value;
-  } else if (inputId=== 'photo') {
-    data.photo= event.target.value;
-    previewImage.src= inputImage.value;   
-    
   }
+  // } else if (inputId=== 'photo') {
+  //   data.photo= event.target.value;
+  //   previewImage.src= inputImage.file;   
+  // }
 };
 
 function handleDesign(event) {
@@ -81,10 +82,19 @@ function handleDesign(event) {
     }
 };
 
-
+function handleImage (event) {
+  data.photo= event.target.value;
+  const currentPhoto= inputImage.value;
+  console.log(data.photo);
+  previewImage.src= "//www.telemundo.com/sites/nbcutelemundo/files/styles/social_share_1024x768_scale/public/images/article/cover/2018/04/19/tigre-caminando.jpg?ramen_itok=iqwQftIcTf";
+  console.log(inputImage.value);
+  console.dir(inputImage);
+  console.log(previewImage.src);
+};
 
 //campos de los links (@ github, ayuda linkedin, mail y phone)
 
 formContainer.addEventListener('input', handleForm);
-
+inputImage.addEventListener('change', handleImage);
 formDesign.addEventListener('input', handleDesign);
+
