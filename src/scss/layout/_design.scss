@@ -1,4 +1,4 @@
-.formDesing {
+.formDesign {
   margin: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -100,39 +100,44 @@
     margin: 0 20px;
 }
 
-
 .palette1 {
-  .card__name {
-    color: $darkGreenBlue;
+  .card {
+    &__name {
+      color: $darkGreenBlue;
+    }
+    &__data {
+      border-color: $dirtyBlue;
+    }
   }
-  .card__links {
-    color: $dirtyBlue;
-  }
-  .card__data {
-    color: $hospitalGreen;
+  .nav__links--icon {
+    border-color: $hospitalGreen;
   }
 }
 
 .palette2 {
-  .card__name {
-    color: $driedBlood;
+  .card {
+    &__name {
+      color: $driedBlood;
+    }
+    &__data {
+      border-color: $rustyRed;
+    }
   }
-  .card__links {
-    color: $rustyRed;
-  }
-  .card__data {
-    color: $tomato;
+  .nav__links--icon {
+    border-color: $tomato;
   }
 }
 
 .palette3 {
-  .card__name {
-    color: $slate;
+  .card {
+    &__name {
+      color: $slate;
+    }
+    &__data {
+      border-color: $fadedOrange;
+    }
   }
-  .card__links {
-    color: $fadedOrange;
-  }
-  .card__data {
-    color: $lifeGreyBlue;
+  .nav__links--icon {
+    border-color: $lifeGreyBlue;
   }
 }
