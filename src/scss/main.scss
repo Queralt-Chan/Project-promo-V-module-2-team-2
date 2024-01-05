@@ -10,23 +10,29 @@
 @import 'layout/share';
 @import 'layout/footer';
 
-
-
-.bodyPage{
-    background-image: linear-gradient(to bottom, $whiteFour, $whiteTwo 9%);
-    display: flex;
-    flex-direction: column;
-    @media(min-width: 768px){
+.bodyPage {
+  background-image: linear-gradient(to bottom, $whiteFour, $whiteTwo 9%);
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
     flex-direction: row-reverse;
-    }
-
-      
+    min-height: 79vh;
+  }
 }
 
 .formStyle {
-    display: flex;
-    flex-direction: column;
-    @media (min-width: 768px){
-        width: 40vw;
-    }
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    width: 40vw;
+  }
+}
+
+.hidden {
+  .arrowUp {
+    transform: rotate(0.5turn);
+  }
+  .container {
+    display: none;
+  }
 }

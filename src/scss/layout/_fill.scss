@@ -28,16 +28,14 @@
             margin-bottom: 7px;
         }
         input {
-            color: $pinkish-Grey;
+            color: $gunMetal;
             font-size: 1.4rem;
             font-family: $fontOpenSans;
             border: solid 1px $hospitalGreen;
-            padding-top: 3px;
-            padding-bottom: 7px;
+            padding: 3px 0 7px 7px;
             &::placeholder {
                 color: $pinkish-Grey;
             }
-            // max-width: 281px;
         }
     }
     &__image {
@@ -70,6 +68,9 @@
             border: solid 1px $hospitalGreen;
             align-self: flex-end;
             transform: translateY(60%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
     }
 }
 
