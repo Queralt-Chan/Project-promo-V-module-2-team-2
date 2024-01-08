@@ -29,10 +29,12 @@ const form= document.querySelector('.formStyle');
 const fill = document.querySelector('.js_formFill');
 const hiddenFill = document.querySelector('.js-hiddenFill')
 
-
 //Variables Share
 const share = document.querySelector('.js_formShare');
-const hiddenShare = document.querySelector('.js-share');
+//const hiddenShare = document.querySelector('.js-share');
+const createLink = document.querySelector('.js-shareHidden');
+const btnOrange = document.querySelector('.js-btnOrange');
+
 //Objeto
 const data= {
     palette: 1,

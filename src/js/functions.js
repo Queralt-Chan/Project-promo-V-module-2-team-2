@@ -40,5 +40,13 @@ function handleForm(event) {
   
   formContainer.addEventListener('input', handleForm);
   formDesign.addEventListener('input', handleDesign);
+
+//EVENTO DEL BOTÓN CREAR TARJETA  
+
+  const shareHidden = (event)=>{
+    event.preventDefault();
+    createLink.style.display = 'flex';
+    btnOrange.classList.add('btnGrey');
+  }
   
-  
+  btnOrange.addEventListener('click', shareHidden);
