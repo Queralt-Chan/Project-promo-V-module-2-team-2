@@ -14,7 +14,7 @@ const previewCard = document.querySelector('.js-card');
 const palette1= document.querySelector('.js_palette1');
 const palette2= document.querySelector('.js_palette2');
 const palette3= document.querySelector('.js_palette3');
-const formDesign= document.querySelector('.js_formDesign');
+const formDesign= document.querySelector('.formDesign');
 const hiddenDesign = document.querySelector('.js-designHidden');
 
 
@@ -43,4 +43,15 @@ const data= {
     linkedin: '',
     github: '',
     photo: '',
-}
+};
+
+const newData= {
+    palette: 1,
+    name: '',
+    job: '',
+    phone: '',
+    email: '',
+    linkedin: '',
+    github: '',
+    photo: '',
+};

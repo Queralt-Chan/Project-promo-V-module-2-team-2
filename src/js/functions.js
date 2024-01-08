@@ -22,6 +22,7 @@ function handleForm(event) {
       data.github= event.target.value;
       previewGithub.href = 'https://github.com/' + inputGithub.value;
     }
+    console.log(data)
   };
   
   function handleDesign(event) {

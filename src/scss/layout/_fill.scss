@@ -2,7 +2,8 @@
     border-color: transparent;
     display: flex;
     flex-direction: column;
-    
+    border-bottom: 1px solid $whiteThree;
+     margin: 20px;  
 }
 
 .formHidden {
@@ -16,6 +17,7 @@
     grid-template-rows: repeat(8,40px);
     gap: 45px;
     margin: 30px 20px;
+       
     &__name, &__job, &__email, &__phone, &__linkedin, &__github {
         display: flex;
         flex-direction: column;
@@ -73,10 +75,3 @@
             background-size: cover;
     }
 }
-
- 
-// .borderFill {
-//     background-color: $whiteThree;
-//     height: 1px;
-//     margin: 0 20px;
-// }

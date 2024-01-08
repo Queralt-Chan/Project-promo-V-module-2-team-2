@@ -1,127 +1,110 @@
 .buttonOrange {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border: $dullOrange;
+  margin-bottom: 30px;
+
+  &__btn {
+    background-color: $dullOrange;
     border: none;
-    border: $dullOrange;
-    margin-bottom: 30px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    width: 199px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 30px auto;
+  }
 
-   
-    &__btn {
-        background-color: $dullOrange;
-        border: none;
-        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-        width: 199px;
-        height: 50px;
-        border-radius: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.8rem;
-        margin: 30px auto;
+  &__icon {
+    font-size: 2.2rem;
+    color: $whiteTwo;
+  }
 
+  &__text {
+    @include formText;
+    color: $whiteTwo;
+    text-transform: uppercase;
+  }
 
-    }
-
-
-    &__icon {
-        font-size: 2.2rem;
-        color: $whiteTwo;
-
-
-    }
-
-    &__text {
-        @include formText;
-        color: $whiteTwo;
-        text-transform: uppercase;
-
-
-    }
-
-    &__botLine {
-        background-color: $whiteThree;
-        width: 80vw;
-        height: 1px;
-        margin: 0 20px;
-
-    }
+  &__botLine {
+    background-color: $whiteThree;
+    width: 80vw;
+    height: 1px;
+    margin: 0 20px;
+  }
 }
 
 .containerButton {
-   border-bottom: 1px solid $whiteThree;
-   margin: 20px 20px;
+  border-bottom: 1px solid $whiteThree;
+  margin: 20px 20px;
 }
 
 .divShare {
-    height: 40vh;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 40vh;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  margin-bottom: 5px;
+
+  &__p {
+    @include formText;
+    color: $gunMetal;
+  }
+
+  &__a {
+    @include formText;
+    font-family: $fontOpenSans;
+    font-size: 1.2rem;
+    color: $dullOrange;
+    text-decoration: none;
+    flex-wrap: nowrap;
     align-items: center;
-    padding-bottom: 30px;
-    padding-top: 20px;
-    margin-bottom: 5px;
-
-
-    &__p {
-        @include formText;
-        color: $gunMetal;
-    }
-
-    &__a {
-        @include formText;
-        font-family: $fontOpenSans;
-        font-size: 1.2rem;
-        color: $dullOrange;
-        text-decoration: none;
-        flex-wrap: nowrap;
-        align-items: center;
-        
-
-    }
-
-    
+  }
 }
 
 .twitterShare {
-    background-color: $azure;
-    height: 30px;
-    width: 181px;
-    border-radius: 3px;
-    border: none;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 9.5px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    
+  background-color: $azure;
+  height: 30px;
+  width: 181px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 9.5px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 
-    &__icon {
-        font-size: 1.8rem;
-        color: $whiteTwo;
-    }
+  &__icon {
+    font-size: 1.8rem;
+    color: $whiteTwo;
+  }
 
-    &__button {
-        @include formText;
-        font-size: 1.4rem;
-        font-family: $fontOpenSans;
-        color: $whiteTwo;
-        font-weight: 400;
-
-    }
-
+  &__button {
+    @include formText;
+    font-size: 1.4rem;
+    font-family: $fontOpenSans;
+    color: $whiteTwo;
+    font-weight: 400;
+  }
 }
 
 .shareHidden {
-    display: flex;
-    flex-direction: column;
-    text-align:center;
-    align-items: center;
-    border-bottom: 1px solid $whiteThree;
-    margin: 20px 20px;
-    display: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-bottom: 1px solid $whiteThree;
+  margin: 20px 20px;
+  display: none;
 }
