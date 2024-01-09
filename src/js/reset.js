@@ -1,6 +1,7 @@
 'use strict'
 
 const reset = document.querySelector('.js-cardReset');
+const selectInput = document.querySelectorAll('.js-select');
 
 const resetData = () =>{
   Object.assign(data, newData);
@@ -37,6 +38,10 @@ const resetForm = ()=>{
   for (let i = 0; i < inputsForm.length; i++){
     inputsForm[i].value = '';
   }
+  for (let i = 0; i < selectInput.length; i++){
+    selectInput[i].checked = false;
+  }
+
   resetData(data);
   resetColor();
   resetCardPreview(previewCardData);
