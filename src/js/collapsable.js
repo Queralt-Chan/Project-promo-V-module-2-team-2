@@ -9,24 +9,39 @@ const fieldsetFill = document.querySelector('.js-fieldsetFill');
 const fieldsetShare = document.querySelector('.js-fieldsetShare');
 
 const fillOption = () => {
-  fieldsetDesign.classList.add('hidden');
-  fieldsetFill.classList.remove('hidden');
-  fieldsetShare.classList.add('hidden');
+  if (fieldsetFill.classList.contains('hidden')) {
+    fieldsetDesign.classList.add('hidden');
+    fieldsetFill.classList.remove('hidden');
+    fieldsetShare.classList.add('hidden');
+  } else {
+    fieldsetFill.classList.add('hidden');
+    fieldsetShare.classList.remove('hidden');
+  }
 };
+
 const shareOption = () => {
-  fieldsetDesign.classList.add('hidden');
-  fieldsetFill.classList.add('hidden');
-  fieldsetShare.classList.remove('hidden');
+  if (fieldsetShare.classList.contains('hidden')) {
+    fieldsetDesign.classList.add('hidden');
+    fieldsetFill.classList.add('hidden');
+    fieldsetShare.classList.remove('hidden');
+  } else {
+    fieldsetShare.classList.add('hidden');
+    fieldsetDesign.classList.remove('hidden');
+  }
 };
 const designOption = () => {
-  fieldsetDesign.classList.remove('hidden');
-  fieldsetFill.classList.add('hidden');
-  fieldsetShare.classList.add('hidden');
+  if (fieldsetDesign.classList.contains('hidden')) {
+    fieldsetDesign.classList.remove('hidden');
+    fieldsetFill.classList.add('hidden');
+    fieldsetShare.classList.add('hidden');
+  } else {
+    fieldsetDesign.classList.add('hidden');
+    fieldsetFill.classList.remove('hidden');
+  }
 };
 
 const handleMain = (event) => {
   const formOption = event.currentTarget;
-  console.log(formOption);
   if (formOption === fill) {
     fillOption();
   } else if (formOption === share) {
