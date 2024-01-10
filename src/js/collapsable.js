@@ -53,4 +53,5 @@ const handleMain = (event) => {
 
 mainOption.forEach((option) => {
   option.addEventListener('click', handleMain);
+
 });
