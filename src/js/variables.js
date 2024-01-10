@@ -37,7 +37,7 @@ const btnOrange = document.querySelector('.js-btnOrange');
 
 //Objeto
 const data= {
-    palette: 1,
+    palette: 0,
     name: '',
     job: '',
     phone: '',
@@ -48,7 +48,7 @@ const data= {
 };
 
 const newData= {
-    palette: 1,
+    palette: 0,
     name: '',
     job: '',
     phone: '',

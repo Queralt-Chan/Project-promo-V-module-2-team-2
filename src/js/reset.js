@@ -7,7 +7,7 @@ const resetData = () =>{
   Object.assign(data, newData);
 };
 const resetColor = ()=>{
-  previewCard.classList.remove('palette1', 'palette2', 'palette3');
+  previewCard.classList.remove('palette2', 'palette3');
   };
 
 const previewCardData ={
@@ -38,9 +38,9 @@ const resetForm = ()=>{
   for (let i = 0; i < inputsForm.length; i++){
     inputsForm[i].value = '';
   }
-  for (let i = 0; i < selectInput.length; i++){
-    selectInput[i].checked = false;
-  }
+   for (let i = 0; i < selectInput.length; i++){
+     selectInput[i].checked = false;
+ }
 
   resetData(data);
   resetColor();
