@@ -21,9 +21,10 @@ function handleForm(event) {
   } else if (inputId === 'github') {
     data.github = event.target.value;
     previewGithub.href = 'https://github.com/' + inputGithub.value;
+  } else if (inputId === 'photo'){
+    data.photo = event.target.value;
   }
-  console.log(data);
-}
+ }
 
 function handleDesign(event) {
   const inputPalette = event.target.value;
