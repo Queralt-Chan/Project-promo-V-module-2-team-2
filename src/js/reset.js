@@ -1,13 +1,13 @@
 'use strict'
 
 const reset = document.querySelector('.js-cardReset');
-const selectInput = document.querySelectorAll('.js-select');
+const select1 = document.querySelector('.js-select1');
 
 const resetData = () =>{
   Object.assign(data, newData);
 };
 const resetColor = ()=>{
-  previewCard.classList.remove('palette1', 'palette2', 'palette3');
+  previewCard.classList.remove('palette2', 'palette3');
   };
 
 const previewCardData ={
@@ -32,19 +32,20 @@ profileImage.style.backgroundImage = previewCardData.photo;
 profilePreview.style.backgroundImage =  previewCardData.photoDiv;
 };
 
-const resetForm = ()=>{
-    console.log('click');
+const resetInput = ()=>{
   const inputsForm = document.querySelectorAll(".js-input");
   for (let i = 0; i < inputsForm.length; i++){
     inputsForm[i].value = '';
   }
-  for (let i = 0; i < selectInput.length; i++){
-    selectInput[i].checked = false;
-  }
+ select1.checked = true;
+}
 
+const resetForm = ()=>{
   resetData(data);
   resetColor();
   resetCardPreview(previewCardData);
+  resetInput();
+  console.log(data)
   };
 
 reset.addEventListener('click', resetForm);
