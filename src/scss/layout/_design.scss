@@ -1,8 +1,9 @@
 .formDesign {
-  margin-top: 30px;
+  //margin-top: 30px;
   display: flex;
   flex-direction: column;
   border-color: transparent;
+  border-bottom: 1px solid $whiteThree;
   /* @media(min-width: 768px){
     }*/
 }
@@ -17,14 +18,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-right: 20px;
+  //padding-right: 20px;
   border-color: transparent;
   gap: 20px;
   /*@media(min-width: 768px){
     }*/
 
   &__rectangOne {
-
     display: flex;
     &--colorDark {
       background-color: $darkGreenBlue;
@@ -47,7 +47,6 @@
   }
 
   &__rectangTwo {
-
     display: flex;
     &--colorDried {
       background-color: $driedBlood;
@@ -72,18 +71,15 @@
   &__rectangThree {
     padding-bottom: 20px;
     display: flex;
-
     &--colorSlate {
       background-color: $slate;
       width: 30px;
       height: 25px;
     }
-
     &--colorFaded {
       background-color: $fadedOrange;
       width: 30px;
     }
-
     &--colorLight {
       background-color: $lifeGreyBlue;
       width: 30px;

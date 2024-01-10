@@ -15,7 +15,7 @@ const palette1= document.querySelector('.js_palette1');
 const palette2= document.querySelector('.js_palette2');
 const palette3= document.querySelector('.js_palette3');
 const formDesign= document.querySelector('.formDesign');
-const hiddenDesign = document.querySelector('.js-designHidden');
+//const hiddenDesign = document.querySelector('.js-designHidden');
 
 
 //Variables Fill
@@ -26,11 +26,11 @@ const inputMail = document.querySelector('.js_inputEmail');
 const inputLinkedin = document.querySelector('.js_inputLinkedin');
 const inputGithub = document.querySelector('.js_inputGithub');
 const form= document.querySelector('.formStyle');
-const fill = document.querySelector('.js_formFill');
-const hiddenFill = document.querySelector('.js-hiddenFill')
+//const fill = document.querySelector('.js_formFill');
+//const hiddenFill = document.querySelector('.js-hiddenFill')
 
 //Variables Share
-const share = document.querySelector('.js_formShare');
+//const share = document.querySelector('.js_formShare');
 //const hiddenShare = document.querySelector('.js-share');
 const createLink = document.querySelector('.js-shareHidden');
 const btnOrange = document.querySelector('.js-btnOrange');
