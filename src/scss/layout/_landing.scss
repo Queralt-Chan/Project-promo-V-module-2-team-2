@@ -3,12 +3,10 @@
   
     .landing {
         background-color: $whiteFour;
-        display: flex;
-        flex-direction: column;
+       @include flexColumn;
+     @include centerCenter;
         align-content: center;
-        text-align: center;
         justify-content: center;
-        align-items: center;
         padding-bottom: 40px;
         min-height: 85vh;
         
@@ -47,10 +45,9 @@
 
         display: flex; 
         justify-content: space-around;
-        align-items:center;
+        @include centerCenter;
         color: $dullOrange;
         font-size: 2.24rem;
-        text-align: center;
         gap: 24px;
         border: solid 1.6px $dullOrange;
         border-radius: 4px;
