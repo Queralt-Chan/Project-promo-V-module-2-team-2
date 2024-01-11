@@ -77,10 +77,15 @@
         width: 30px;
         height: 30px;
         border: solid 1px $hospitalGreen;
-        align-self: flex-end;
-        transform: translate(-300%,-165%);
+        // align-self: flex-end;
+        // transform: translate(-300%,-165%);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
+}
+
+.btnImage {
+    display: flex;
+    flex-direction: row;
 }
