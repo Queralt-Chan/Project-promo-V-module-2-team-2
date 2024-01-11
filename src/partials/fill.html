@@ -17,10 +17,12 @@
         </div>
         <div class="formContainer__image">
             <p class="formContainer__image--title">Imagen de perfil</p>
-            <label for="photo" class="formContainer__image--add "> Añadir imagen</label>
-            <input type="file" name="photo" id="photo" accept=".jpg, .jpeg, .png" class="js_image js__profile-upload-btn js-input"/>
+            <div class="btnImage">
+                <label for="photo" class="formContainer__image--add "> Añadir imagen</label>
+                <input type="file" name="photo" id="photo" accept=".jpg, .jpeg, .png" class="formContainer__image--input js_image js__profile-upload-btn js-input"/>
+                <div class="formContainer__square js_miniPreview"></div>
+            </div>
         </div>
-        <div class="formContainer__square js_miniPreview"></div>
         
         <div class="formContainer__email">
             <label for="">Email</label>

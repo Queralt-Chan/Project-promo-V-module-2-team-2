@@ -3,75 +3,89 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $whiteThree;
-     margin: 20px;  
+    margin: 20px;
 }
-
-.formHidden {
-    display: none;
-}
-//para que no se vea la section tengo que añadir esta clase y quitarle la que tiene, o cambiar una por otra//
 
 .formContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(8,40px);
-    gap: 45px;
-    margin: 30px 20px;
-       
-    &__name, &__job, &__email, &__phone, &__linkedin, &__github {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+
+    &__name,
+    &__job,
+    &__email,
+    &__phone,
+    &__linkedin,
+    &__github {
         display: flex;
         flex-direction: column;
-        grid-column: 1/3;
         font-size: 1.4rem;
         font-family: $fontOpenSans;
         line-height: 1.43;
+
         label {
             color: $darkGreenBlue;
             margin-bottom: 7px;
         }
+
         input {
             color: $gunMetal;
             font-size: 1.4rem;
             font-family: $fontOpenSans;
             border: solid 1px $hospitalGreen;
             padding: 3px 0 7px 7px;
+
             &::placeholder {
                 color: $pinkish-Grey;
             }
         }
     }
+
     &__image {
-            display: flex;
-            flex-direction: column;
-            grid-column: 1/2;
-            font-size: 1.4rem;
-            font-family: $fontOpenSans;
-            line-height: 1.43;
+        display: flex;
+        flex-direction: column;
+        // grid-column: 1/2;
+        font-size: 1.4rem;
+        font-family: $fontOpenSans;
+        line-height: 1.43;
+
         &--title {
             color: $darkGreenBlue;
             margin-bottom: 7px;
         }
+
         &--add {
             color: $whiteTwo;
             background-color: $dullOrange;
             width: 140px;
-            height: 40px;
+            height: 30px;
             padding-top: 3px;
             padding-bottom: 7px;
+            margin-right: 20px;
             text-align: center;
+           
+        }
+
+        &--input {
+            display: none;
+            position:relative;
         }
     }
 
     &__square {
-            grid-column: 2/3;
-            grid-row: 3/4;
-            width: 30px;
-            height: 30px;
-            border: solid 1px $hospitalGreen;
-            align-self: flex-end;
-            transform: translateY(60%);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        width: 30px;
+        height: 30px;
+        border: solid 1px $hospitalGreen;
+        // align-self: flex-end;
+        // transform: translate(-300%,-165%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
+}
+
+.btnImage {
+    display: flex;
+    flex-direction: row;
 }
