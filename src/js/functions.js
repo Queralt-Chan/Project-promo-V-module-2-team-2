@@ -1,5 +1,28 @@
 'use strict';
 
+function at() {
+  const linkGithub = inputGithub.value;
+  if (linkGithub.includes('@')) {
+    previewGithub.href = 'https://github.com/' + linkGithub.replace(/@/, '');
+  } else {
+    previewGithub.href = 'https://github.com/' + linkGithub;
+  }
+}
+
+function linkedinFuction() {
+  const linkedinVal = inputLinkedin.value;
+  if (linkedinVal.includes('https:///www.')) {
+    previewLinkedin.href = linkedinVal.replace('https:///www.', '');
+  } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
+    previewLinkedin.href = linkedinVal.replace(
+      'https://www.linkedin.com/in/',
+      ''
+    );
+  } else {
+    previewLinkedin.href = 'https:///www.' + linkedinVal;
+  }
+}
+
 function handleForm(event) {
   const inputId = event.target.id;
   if (inputId === 'name') {
@@ -17,14 +40,15 @@ function handleForm(event) {
     previewMail.href = 'mailto:' + inputMail.value;
   } else if (inputId === 'linkedin') {
     data.linkedin = event.target.value;
-    previewLinkedin.href = inputLinkedin.value;
+    linkedinFuction();
+    console.log(linkedinFuction);
   } else if (inputId === 'github') {
     data.github = event.target.value;
-    previewGithub.href = 'https://github.com/' + inputGithub.value;
-  } else if (inputId === 'photo'){
+    at();
+  } else if (inputId === 'photo') {
     data.photo = event.target.value;
   }
- }
+}
 
 function handleDesign(event) {
   const inputPalette = event.target.value;
@@ -39,7 +63,7 @@ function handleDesign(event) {
   data.palette = inputPalette;
 }
 
-//campos de los links (@ github, ayuda linkedin, mail y phone)
+//campos de los links ( ayuda linkedin, mail y phone)
 
 formContainer.addEventListener('input', handleForm);
 formDesign.addEventListener('input', handleDesign);
@@ -51,6 +75,5 @@ const shareHidden = (event) => {
   createLink.style.display = 'flex';
   btnOrange.classList.add('btnGrey');
 };
-
 
 btnOrange.addEventListener('click', shareHidden);

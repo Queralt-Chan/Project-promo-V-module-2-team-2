@@ -43,42 +43,60 @@
        @include fontSizeFill;
         line-height: 1.43;
 
-        &--title {
-            color: $darkGreenBlue;
-            margin-bottom: 7px;
-        }
+      &::placeholder {
+        color: $pinkish-Grey;
+      }
+    }
+  }
 
-        &--add {
-            color: $whiteTwo;
-            background-color: $dullOrange;
-            width: 140px;
-            height: 30px;
-            padding-top: 3px;
-            padding-bottom: 7px;
-            margin-right: 20px;
-            text-align: center;
-           
-        }
+  &__image {
+    display: flex;
+    flex-direction: column;
+    // grid-column: 1/2;
+    font-size: 1.4rem;
+    font-family: $fontOpenSans;
+    line-height: 1.43;
+    &__image {
+      @include flexColumn;
+        // grid-column: 1/2;
+       @include fontSizeFill;
+        line-height: 1.43;
 
-        &--input {
-            display: none;
-            position:relative;
-        }
+    &--title {
+      color: $darkGreenBlue;
+      margin-bottom: 7px;
     }
 
-    &__square {
-        width: 30px;
-        height: 30px;
-        border: solid 1px $hospitalGreen;
-        // align-self: flex-end;
-        // transform: translate(-300%,-165%);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    &--add {
+      color: $whiteTwo;
+      background-color: $dullOrange;
+      width: 140px;
+      height: 30px;
+      padding-top: 3px;
+      padding-bottom: 7px;
+      margin-right: 20px;
+      text-align: center;
     }
+
+    &--input {
+      display: none;
+      position: relative;
+    }
+  }
+
+  &__square {
+    width: 30px;
+    height: 30px;
+    border: solid 1px $hospitalGreen;
+    // align-self: flex-end;
+    // transform: translate(-300%,-165%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .btnImage {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
