@@ -1,10 +1,11 @@
 .formDesign {
-  //margin-top: 30px;
+  margin: 0 20px;
   @include flexColumn;
   border-color: transparent;
   border-bottom: 1px solid $whiteThree;
-  /* @media(min-width: 768px){
-    }*/
+  @media(min-width: 768px){
+    margin: 0 30px 0 40px;
+    }
 }
 .colours {
   color: $gunMetal;

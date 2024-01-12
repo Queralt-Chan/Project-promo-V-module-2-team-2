@@ -2,7 +2,11 @@
  @include flexColumn;
   border: none;
   border: $dullOrange;
-  margin-bottom: 30px;
+  margin: 0 20px 30px;
+  border-bottom: 1px solid $whiteThree;
+  @media(min-width: 768px){
+    margin: 0 30px 171px 40px;
+    }
 
   &__btn {
     background-color: $dullOrange;
@@ -37,11 +41,6 @@
   }
 }
 
-.containerButton {
-  border-bottom: 1px solid $whiteThree;
-  margin: 20px 20px;
-}
-
 .divShare {
   height: 40vh;
   border: none;
@@ -55,6 +54,7 @@
   &__p {
     @include formText;
     color: $gunMetal;
+    margin-top: 20px;
   }
 
   &__a {
@@ -101,7 +101,7 @@
   //display: flex;
   flex-direction: column;
  @include centerCenter;
-  border-bottom: 1px solid $whiteThree;
+  border-top: 1px solid $whiteThree;
   margin: 20px 20px;
   display: none;
 }
