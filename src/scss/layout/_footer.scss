@@ -1,8 +1,7 @@
 .footer {
   background-color: $whiteTwo;
-  display: flex;
+ @include flexColumn;
   align-items: center;
-  flex-direction: column;
   padding-top: 18px;
   min-height: 10vh;
   border-top: solid 1px $whiteThree;

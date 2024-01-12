@@ -8,3 +8,22 @@
     letter-spacing: normal;
 }
 
+@mixin flexColumn (){
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin centerCenter () {
+    text-align: center;
+    align-items: center;
+}
+
+@mixin paletteSize () {
+    width: 30px;
+    height: 25px;
+}
+
+@mixin fontSizeFill () {
+    font-size: 1.4rem;
+    font-family: $fontOpenSans;
+}

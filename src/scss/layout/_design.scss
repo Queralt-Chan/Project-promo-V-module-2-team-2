@@ -1,7 +1,6 @@
 .formDesign {
   //margin-top: 30px;
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
   border-color: transparent;
   border-bottom: 1px solid $whiteThree;
   /* @media(min-width: 768px){
@@ -15,8 +14,7 @@
 }
 
 .section {
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
   align-items: flex-end;
   //padding-right: 20px;
   border-color: transparent;
@@ -28,18 +26,15 @@
     display: flex;
     &--colorDark {
       background-color: $darkGreenBlue;
-      width: 30px;
-      height: 25px;
+      @include paletteSize;
     }
     &--colorDirty {
       background-color: $dirtyBlue;
-      width: 30px;
-      height: 25px;
+      @include paletteSize;
     }
     &--colorHospital {
       background-color: $hospitalGreen;
-      width: 30px;
-      height: 25px;
+      @include paletteSize;
     }
     &--input1 {
       margin-right: 10px;
@@ -50,18 +45,15 @@
     display: flex;
     &--colorDried {
       background-color: $driedBlood;
-      width: 30px;
-      height: 25px;
+      @include paletteSize;
     }
     &--colorRusty {
       background-color: $rustyRed;
-      width: 30px;
-      height: 25px;
+      @include paletteSize;
     }
     &--colorTomato {
       background-color: $tomato;
-      width: 30px;
-      height: 25px;
+     @include paletteSize;
     }
     &--input2 {
       margin-right: 10px;
@@ -73,8 +65,7 @@
     display: flex;
     &--colorSlate {
       background-color: $slate;
-      width: 30px;
-      height: 25px;
+      @include paletteSize;
     }
     &--colorFaded {
       background-color: $fadedOrange;
