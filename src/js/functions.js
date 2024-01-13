@@ -17,6 +17,9 @@ function linkedinFuction() {
   } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
     previewLinkedin.href = 'https:///www.' + linkedinVal.replace(
       'https://www.','');
+  } else if (linkedinVal.includes('linkedin.com/in/')) {
+    previewLinkedin.href = 'https://www.linkedin.com/in/' + linkedinVal.replace(
+      'linkedin.com/in/','');
   } else {
     previewLinkedin.href = 'https://www.linkedin.com/in/' + linkedinVal;
   }
