@@ -12,14 +12,14 @@ function at() {
 function linkedinFuction() {
   const linkedinVal = inputLinkedin.value;
   if (linkedinVal.includes('https:///www.')) {
-    previewLinkedin.href = linkedinVal.replace('https:///www.', '');
-  } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
     previewLinkedin.href = linkedinVal.replace(
-      'https://www.linkedin.com/in/',
-      ''
-    );
+      'https://www.','');
+  } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
+    previewLinkedin.href =  linkedinVal;
+  } else if (linkedinVal.includes('linkedin.com/in/')) {
+    previewLinkedin.href = 'https://www.' + linkedinVal;
   } else {
-    previewLinkedin.href = 'https:///www.' + linkedinVal;
+    previewLinkedin.href = 'https://www.linkedin.com/in/' + linkedinVal;
   }
 }
 
