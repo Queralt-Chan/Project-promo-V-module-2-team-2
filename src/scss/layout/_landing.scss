@@ -7,9 +7,12 @@
   padding-bottom: 40px;
   min-height: 85vh;
   &__image {
-    margin-top: 95px;
-    width: 50%;
-    padding: 0 35px;
+    width: 300px;
+    padding: 35px;
+    @media (min-width: 768px) {
+      width: 400px;
+    }
+    
   }
   &__title {
     font-family: $fontMerriweather;
