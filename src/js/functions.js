@@ -98,6 +98,7 @@ function showURL(result){
     linkCard.href = result.cardURL;
     linkCard.innerHTML= result.cardURL;
     btnOrange.disabled = true;
+    shareError.innerHTML = 'La tarjeta ha sido creada: ';
     
   }else{
     shareError.innerHTML = 'Error: revisa los datos introducidos y haz click de nuevo en Crear Tarjeta';
