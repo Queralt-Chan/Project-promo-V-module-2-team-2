@@ -97,12 +97,11 @@ function showURL(result){
   if(result.success){
     linkCard.href = result.cardURL;
     linkCard.innerHTML= result.cardURL;
+    btnOrange.disabled = true;
     
   }else{
-    linkCard.innerHTML = 'Error: revisa los datos introducidos y haz click de nuevo en Crear Tarjeta';
-    //resetCrearTarjeta()
+    shareError.innerHTML = 'Error: revisa los datos introducidos y haz click de nuevo en Crear Tarjeta';
+    btnOrange.disabled = false;
+    btnOrange.classList.remove('btnGrey');
   }
 }
-
-// funcion resetCrearTarjeta:
-//  click, toggle clase, ¿evento sobre el boton gris : ocultar zona de tarjeta creada y abrir rellena??

@@ -29,6 +29,7 @@ const form = document.querySelector('.formStyle');
 const createLink = document.querySelector('.js-shareHidden');
 const btnOrange = document.querySelector('.js-btnOrange');
 const linkCard = document.querySelector('.js-linkCard');
+const shareError = document.querySelector('.js-shareError');
 
 //Objeto
 const data = {
