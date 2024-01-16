@@ -28,10 +28,11 @@ const form = document.querySelector('.formStyle');
 //Variables Share
 const createLink = document.querySelector('.js-shareHidden');
 const btnOrange = document.querySelector('.js-btnOrange');
+const linkCard = document.querySelector('.js-linkCard');
 
 //Objeto
 const data = {
-  palette: 0,
+  palette: 1,
   name: '',
   job: '',
   phone: '',
@@ -42,7 +43,7 @@ const data = {
 };
 
 const newData = {
-  palette: 0,
+  palette: 1,
   name: '',
   job: '',
   phone: '',

@@ -11,15 +11,15 @@ function at() {
 
 function linkedinFuction() {
   const linkedinVal = inputLinkedin.value;
-  if (linkedinVal.includes('https:///www.')) {
+  if (linkedinVal.includes('https://www.')) {
     previewLinkedin.href = linkedinVal.replace(
       'https://www.','');
-  } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
-    previewLinkedin.href =  linkedinVal;
   } else if (linkedinVal.includes('linkedin.com/in/')) {
     previewLinkedin.href = 'https://www.' + linkedinVal;
+  } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
+    previewLinkedin.href =  linkedinVal;
   } else {
-    previewLinkedin.href = 'https://www.linkedin.com/in/' + linkedinVal;
+    previewLinkedin.href =  linkedinVal;
   }
 }
 
@@ -41,7 +41,6 @@ function handleForm(event) {
   } else if (inputId === 'linkedin') {
     data.linkedin = event.target.value;
     linkedinFuction();
-    console.log(linkedinFuction);
   } else if (inputId === 'github') {
     data.github = event.target.value;
     at();
@@ -70,10 +69,40 @@ formDesign.addEventListener('input', handleDesign);
 
 //EVENTO DEL BOTÓN CREAR TARJETA
 
-const shareHidden = (event) => {
-  event.preventDefault();
+const shareHidden = () => {
   createLink.style.display = 'flex';
   btnOrange.classList.add('btnGrey');
 };
 
-btnOrange.addEventListener('click', shareHidden);
+btnOrange.addEventListener('click', createCard);
+
+function createCard (event) {
+  event.preventDefault();
+  fetch('https://dev.adalab.es/api/card/', {
+    method: 'POST',
+    body: JSON.stringify(data), 
+    headers: {'Content-type': 'application/json'}
+})
+  .then ((response) => response.json())
+  .then ((result) => {
+    shareHidden();
+    showURL(result);
+  })
+  .catch((error) => console.log(error));
+}
+
+
+
+function showURL(result){
+  if(result.success){
+    linkCard.href = result.cardURL;
+    linkCard.innerHTML= result.cardURL;
+    
+  }else{
+    linkCard.innerHTML = 'Error: revisa los datos introducidos y haz click de nuevo en Crear Tarjeta';
+    //resetCrearTarjeta()
+  }
+}
+
+// funcion resetCrearTarjeta:
+//  click, toggle clase, ¿evento sobre el boton gris : ocultar zona de tarjeta creada y abrir rellena??
