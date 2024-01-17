@@ -1,7 +1,7 @@
 # Proyecto 2.
 ## Awesome profile-cards.
 
-![Foto landing](/landing.jpeg)
+![Foto landing](/public/images/B-cards.png)
 
 Proyecto grupal donde el cliente ha solicitado la elaboración de una página web interactiva donde se mostrará una tarjeta de visita personalizada. En ella aparecen los siguientes datos:
 * Nombre y apellidos.
