@@ -91,6 +91,7 @@ btnOrange.addEventListener('click', createCard);
 
 function createCard (event) {
   event.preventDefault();
+  console.log(data);
   fetch('https://dev.adalab.es/api/card/', {
     method: 'POST',
     body: JSON.stringify(data), 

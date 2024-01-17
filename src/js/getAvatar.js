@@ -16,9 +16,12 @@ const profilePreview = document.querySelector('.js_miniPreview');
  */
 function getImage(e){
   const myFile = e.currentTarget.files[0];
+  console.log(myFile);
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
 }
+
+
 
 
 /**
