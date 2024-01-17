@@ -28,6 +28,8 @@ function getImage(e){
  * Una vez tenemos los datos listos en el FR podemos
  * trabajar con ellos ;)
  */
+
+
 function writeImage() {
   /* En la propiedad `result` de nuestro FR se almacena
    * el resultado. Ese resultado de procesar el fichero que hemos cargado
@@ -36,6 +38,7 @@ function writeImage() {
    */
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
+  data.photo = fr.result;
 }
 
 
