@@ -9,17 +9,16 @@ function at() {
   }
 }
 
-function linkedinFuction() {
+function linkedinFunction() {
   const linkedinVal = inputLinkedin.value;
   if (linkedinVal.includes('https://www.')) {
-    previewLinkedin.href = linkedinVal.replace(
-      'https://www.','');
+    previewLinkedin.href = linkedinVal.replace('https://www.', '');
   } else if (linkedinVal.includes('linkedin.com/in/')) {
     previewLinkedin.href = 'https://www.' + linkedinVal;
   } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
-    previewLinkedin.href =  linkedinVal;
+    previewLinkedin.href = linkedinVal;
   } else {
-    previewLinkedin.href =  linkedinVal;
+    previewLinkedin.href = linkedinVal;
   }
 }
 
@@ -39,16 +38,30 @@ function handleForm(event) {
     data.email = event.target.value;
     previewMail.href = 'mailto:' + inputMail.value;
   } else if (inputId === 'linkedin') {
-    data.linkedin = event.target.value;
-    linkedinFuction();
+    const valueLinkedin = event.target.value;
+    if (valueLinkedin.includes('https://www.linkedin.com/in/')) {
+      data.linkedin = valueLinkedin.replace('https://www.linkedin.com/in/', '');
+    } else {
+      data.linkedin = inputLinkedin.value;
+    }
+    console.log(valueLinkedin);
+    console.log(inputLinkedin.value);
+
+    linkedinFunction();
   } else if (inputId === 'github') {
-    data.github = event.target.value;
+    const valueGitHub = event.target.value;
+    if(valueGitHub.includes('@')){
+      data.github = valueGitHub.replace(/@/, '');
+    } else {
+      data.github = inputGithub.value;
+    }
     at();
   } else if (inputId === 'photo') {
-    data.photo = event.target.value;
+    data.photo;
   }
+console.log(data);
 }
-
+console.log(data.linkedin);
 function handleDesign(event) {
   const inputPalette = event.target.value;
   previewCard.classList.remove('palette1', 'palette2', 'palette3');
@@ -76,31 +89,29 @@ const shareHidden = () => {
 
 btnOrange.addEventListener('click', createCard);
 
-function createCard (event) {
+function createCard(event) {
   event.preventDefault();
   fetch('https://dev.adalab.es/api/card/', {
     method: 'POST',
-    body: JSON.stringify(data), 
-    headers: {'Content-type': 'application/json'}
-})
-  .then ((response) => response.json())
-  .then ((result) => {
-    shareHidden();
-    showURL(result);
+    body: JSON.stringify(data),
+    headers: { 'Content-type': 'application/json' },
   })
-  .catch((error) => console.log(error));
+    .then((response) => response.json())
+    .then((result) => {
+      shareHidden();
+      showURL(result);
+    })
+    .catch((error) => console.log(error));
 }
 
-
-
-function showURL(result){
-  if(result.success){
+function showURL(result) {
+  if (result.success) {
     linkCard.href = result.cardURL;
-    linkCard.innerHTML= result.cardURL;
+    linkCard.innerHTML = result.cardURL;
     btnOrange.disabled = true;
-    
-  }else{
-    shareError.innerHTML = 'Error: revisa los datos introducidos y haz click de nuevo en Crear Tarjeta';
+  } else {
+    shareError.innerHTML =
+      'Error: revisa los datos introducidos y haz click de nuevo en Crear Tarjeta';
     btnOrange.disabled = false;
     btnOrange.classList.remove('btnGrey');
   }
