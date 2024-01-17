@@ -31,7 +31,7 @@
   background-color: $whiteTwo;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   &__data {
-    height: 42px;
+    min-height: 42px;
     border-left: 5px solid $dirtyBlue;
     margin: 21px 0 10px 0;
   }

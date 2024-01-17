@@ -21,19 +21,7 @@ function linkedinFunction() {
     previewLinkedin.href = linkedinVal;
   }
 }
-// function linkedinFuction() {
-//   const linkedinVal = inputLinkedin.value;
-//   if (linkedinVal.includes('https://www.')) {
-//     previewLinkedin.href = linkedinVal.replace(
-//       'https://www.','');
-//   } else if (linkedinVal.includes('linkedin.com/in/')) {
-//     previewLinkedin.href = 'https://www.' + linkedinVal;
-//   } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
-//     previewLinkedin.href =  linkedinVal;
-//   } else {
-//     previewLinkedin.href =  linkedinVal;
-//   }
-// }
+
 
 function handleForm(event) {
   const inputId = event.target.id;
@@ -54,12 +42,11 @@ function handleForm(event) {
     const valueLinkedin = event.target.value;
     if (valueLinkedin.includes('https://www.linkedin.com/in/')) {
       data.linkedin = valueLinkedin.replace('https://www.linkedin.com/in/', '');
+    } else if (linkedinVal.includes('linkedin.com/in/')) {
+      data.linkedin = valueLinkedin.replace('linkedin.com/in/', '');
     } else {
       data.linkedin = inputLinkedin.value;
     }
-    console.log(valueLinkedin);
-    console.log(inputLinkedin.value);
-
     linkedinFunction();
   } else if (inputId === 'github') {
     const valueGitHub = event.target.value;
@@ -72,9 +59,10 @@ function handleForm(event) {
   } else if (inputId === 'photo') {
     data.photo;
   }
-console.log(data);
+
+localStorage.setItem('data', JSON.stringify(data));
 }
-console.log(data.linkedin);
+
 function handleDesign(event) {
   const inputPalette = event.target.value;
   previewCard.classList.remove('palette1', 'palette2', 'palette3');
@@ -88,12 +76,12 @@ function handleDesign(event) {
   data.palette = inputPalette;
 }
 
-//campos de los links ( ayuda linkedin, mail y phone)
+
 
 formContainer.addEventListener('input', handleForm);
 formDesign.addEventListener('input', handleDesign);
 
-//EVENTO DEL BOTÓN CREAR TARJETA
+
 
 const shareHidden = () => {
   createLink.style.display = 'flex';
@@ -104,7 +92,6 @@ btnOrange.addEventListener('click', createCard);
 
 function createCard(event) {
   event.preventDefault();
-  console.log(data);
   fetch('https://dev.adalab.es/api/card/', {
     method: 'POST',
     body: JSON.stringify(data),

@@ -45,7 +45,6 @@ const resetForm = ()=>{
   resetColor();
   resetCardPreview(previewCardData);
   resetInput();
-  console.log(data)
   };
 
 reset.addEventListener('click', resetForm);
