@@ -9,21 +9,36 @@ function at() {
   }
 }
 
+
 function linkedinFunction() {
   const linkedinVal = inputLinkedin.value;
-  if (linkedinVal.includes('https://www.')) {
-    previewLinkedin.href = linkedinVal.replace('https://www.', '');
+  if (linkedinVal.includes('https:///www.')) {
+    previewLinkedin.href = linkedinVal.replace(
+      'https://www.','');
+  } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
+    previewLinkedin.href =  linkedinVal;
   } else if (linkedinVal.includes('linkedin.com/in/')) {
     previewLinkedin.href = 'https://www.' + linkedinVal;
-  } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
-    previewLinkedin.href = linkedinVal;
   } else {
-    previewLinkedin.href = linkedinVal;
+    previewLinkedin.href = 'https://www.linkedin.com/in/' + linkedinVal;
   }
 }
+// function linkedinFunction() {
+//   const linkedinVal = inputLinkedin.value;
+//   if (linkedinVal.includes('https://www.')) {
+//     previewLinkedin.href = linkedinVal.replace('https://www.', '');
+//   } else if (linkedinVal.includes('linkedin.com/in/')) {
+//     previewLinkedin.href = 'https://www.' + linkedinVal;
+//   } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
+//     previewLinkedin.href = linkedinVal;
+//   } else {
+//     previewLinkedin.href = linkedinVal;
+//   }
+// }
 
 function handleForm(event) {
   const inputId = event.target.id;
+  linkedinFunction();
   if (inputId === 'name') {
     data.name = event.target.value;
     previewName.innerHTML = inputName.value;
@@ -43,11 +58,7 @@ function handleForm(event) {
       data.linkedin = valueLinkedin.replace('https://www.linkedin.com/in/', '');
     } else {
       data.linkedin = inputLinkedin.value;
-    }
-    console.log(valueLinkedin);
-    console.log(inputLinkedin.value);
-
-    linkedinFunction();
+    }  
   } else if (inputId === 'github') {
     const valueGitHub = event.target.value;
     if(valueGitHub.includes('@')){
