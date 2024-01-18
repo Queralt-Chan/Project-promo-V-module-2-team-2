@@ -11,9 +11,7 @@ function at() {
 
 function linkedinFunction() {
   const linkedinVal = inputLinkedin.value;
-  if (linkedinVal.includes('https://www.')) {
-    previewLinkedin.href = linkedinVal.replace('https://www.', '');
-  } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
+  if (linkedinVal.includes('https://www.linkedin.com/in/')) {
     previewLinkedin.href = linkedinVal;
   } else if (linkedinVal.includes('linkedin.com/in/')) {
     previewLinkedin.href = 'https://www.' + linkedinVal;
