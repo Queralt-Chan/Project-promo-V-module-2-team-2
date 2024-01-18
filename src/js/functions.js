@@ -13,15 +13,14 @@ function linkedinFunction() {
   const linkedinVal = inputLinkedin.value;
   if (linkedinVal.includes('https://www.')) {
     previewLinkedin.href = linkedinVal.replace('https://www.', '');
-  } else if (linkedinVal.includes('linkedin.com/in/')) {
-    previewLinkedin.href = 'https://www.' + linkedinVal;
   } else if (linkedinVal.includes('https://www.linkedin.com/in/')) {
     previewLinkedin.href = linkedinVal;
+  } else if (linkedinVal.includes('linkedin.com/in/')) {
+    previewLinkedin.href = 'https://www.' + linkedinVal;
   } else {
     previewLinkedin.href = linkedinVal;
   }
 }
-
 
 function handleForm(event) {
   const inputId = event.target.id;
@@ -42,7 +41,7 @@ function handleForm(event) {
     const valueLinkedin = event.target.value;
     if (valueLinkedin.includes('https://www.linkedin.com/in/')) {
       data.linkedin = valueLinkedin.replace('https://www.linkedin.com/in/', '');
-    } else if (linkedinVal.includes('linkedin.com/in/')) {
+    } else if (valueLinkedin.includes('linkedin.com/in/')) {
       data.linkedin = valueLinkedin.replace('linkedin.com/in/', '');
     } else {
       data.linkedin = inputLinkedin.value;
@@ -50,7 +49,7 @@ function handleForm(event) {
     linkedinFunction();
   } else if (inputId === 'github') {
     const valueGitHub = event.target.value;
-    if(valueGitHub.includes('@')){
+    if (valueGitHub.includes('@')) {
       data.github = valueGitHub.replace(/@/, '');
     } else {
       data.github = inputGithub.value;
@@ -59,8 +58,8 @@ function handleForm(event) {
   } else if (inputId === 'photo') {
     data.photo;
   }
-
-localStorage.setItem('data', JSON.stringify(data));
+  console.log(data.linkedin);
+  localStorage.setItem('data', JSON.stringify(data));
 }
 
 function handleDesign(event) {
@@ -76,12 +75,8 @@ function handleDesign(event) {
   data.palette = inputPalette;
 }
 
-
-
 formContainer.addEventListener('input', handleForm);
 formDesign.addEventListener('input', handleDesign);
-
-
 
 const shareHidden = () => {
   createLink.style.display = 'flex';
@@ -99,6 +94,7 @@ function createCard(event) {
   })
     .then((response) => response.json())
     .then((result) => {
+      console.log(result);
       shareHidden();
       showURL(result);
     })
@@ -111,9 +107,9 @@ function showURL(result) {
     linkCard.innerHTML = result.cardURL;
     btnOrange.disabled = true;
     shareError.innerHTML = 'La tarjeta ha sido creada: ';
-    
-  }else{
-    shareError.innerHTML = 'Error: revisa los datos introducidos y haz click de nuevo en Crear Tarjeta';
+  } else {
+    shareError.innerHTML =
+      'Error: revisa los datos introducidos y haz click de nuevo en Crear Tarjeta';
     btnOrange.disabled = false;
     btnOrange.classList.remove('btnGrey');
   }
